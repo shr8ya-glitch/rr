@@ -1,11 +1,12 @@
-from math import sqrt
-n=int(input("Enter this number:"))
-if n>1:
-    for i in range(2,int(sqrt(n)+1)):
-        if (n%i)==0:
-            print(n,"is not a prime number.")
-            break
-        else:
-            print(n, "is a prime number")
+n=int(input("Enter a number:"))
+org=n
+rev=0
+
+while n>0:
+    d=n%10
+    rev=rev*10+d
+    n//=10
+if org==rev:
+        print("It is a pallindrome")
 else:
-        print(n, "is not a prime number.")
+        print("It is not a palindrome")

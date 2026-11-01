@@ -1,13 +1,7 @@
-def Sieve(n):
-    prime = [True for i in range(n+1)]
-    p = 2
-    while (p * p <= n):
-        if (prime[p] == True):
-            for i in range(p * p, n+1, p):
-                prime[i] = False
-        p += 1
-    for p in range(2, n+1):
-        if prime[p]:
-            print(p)
-n = int(input("Enter a number"))
-Sieve(n)
+nlarge=int(input("Enter the larger number:"))
+nsmall=int(input("Enter the smaller number:"))
+while (nsmall):
+    nums=nsmall
+    nsmall=nlarge%nsmall
+    nlarge=nums
+print("HCF is :",nlarge)
