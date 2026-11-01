@@ -1,14 +1,11 @@
-a=3000
-for n in range(1,a+1):
-    c=0
-    r=0
-    t=n
-    for i in range(1,t+1):
-        if t%i==0:
-            c=c+1
-    if c==2:
-        while t>0:
-            r =r*10+(t%10)
-            t//=10
-        if r==n:
-            print(n)
+def r(p):
+    roman={'M':1000,'D':500,'C':100,'L':50,'X':10,'V':5,'I':1}
+    res=0
+    for i in range(0,len(p)-1):
+        if roman[p[i]]<roman[p[i+1]]:
+            res-=roman[p[i]]
+        else:
+            res+=roman[p[i]]
+    return res+roman[p[-1]]
+roman=input("Enter a roman number: ")
+print("The integer of",roman,"is",r(roman))

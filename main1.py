@@ -1,7 +1,8 @@
-nlarge=int(input("Enter the larger number:"))
-nsmall=int(input("Enter the smaller number:"))
-while (nsmall):
-    nums=nsmall
-    nsmall=nlarge%nsmall
-    nlarge=nums
-print("HCF is :",nlarge)
+def fact(n):
+    print("Factorial of", n, "are:")
+    for i in range(1, n + 1):
+        if n%i == 0:
+            print(i)
+
+n=int(input("Enter a number: "))
+fact(n)

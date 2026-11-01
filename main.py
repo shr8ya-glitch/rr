@@ -1,12 +1,12 @@
-n=int(input("Enter a number:"))
-org=n
-rev=0
+n=int(input("Enter a numder: "))
+digits=len(str(n))
+r=0
+t=n
+while t>0:
+    d=t%10
+    r=r+d**digits
+    t=t//10
 
-while n>0:
-    d=n%10
-    rev=rev*10+d
-    n//=10
-if org==rev:
-        print("It is a pallindrome")
-else:
-        print("It is not a palindrome")
+if r==n:
+    print(n,"is a armstrong number")
+else:print(n,"is not a armstrong number")
