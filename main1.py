@@ -1,15 +1,13 @@
-input("This program demonstrates AND,OR, NOT and XOR.press Enter")
-print("Binary of 7:",bin(7)[2:])
-
-print("Binary of 3:",bin(3)[2:])
-
-print("And of 7 and 3:",7&3)
-
-print("OR of 7 and 3:",7|3)
-
-print("NOT of 3",~3)
-
-print("XOR of 3 and 7 is:",3^7)
-print("Left shift of 7 is:",1<<7)
-print("Right shift of 7 is:",7<<1)
-
+def Sieve(n):
+    prime = [True for i in range(n+1)]
+    p = 2
+    while (p * p <= n):
+        if (prime[p] == True):
+            for i in range(p * p, n+1, p):
+                prime[i] = False
+        p += 1
+    for p in range(2, n+1):
+        if prime[p]:
+            print(p)
+n = int(input("Enter a number"))
+Sieve(n)

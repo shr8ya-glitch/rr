@@ -1,3 +1,11 @@
-n=int(input("Enter a number:"))
-input("Binary of a number is bin(n)[2:].Press Enter.")
-print("The binary of the number is:",bin(n)[2:])
+from math import sqrt
+n=int(input("Enter this number:"))
+if n>1:
+    for i in range(2,int(sqrt(n)+1)):
+        if (n%i)==0:
+            print(n,"is not a prime number.")
+            break
+        else:
+            print(n, "is a prime number")
+else:
+        print(n, "is not a prime number.")
